@@ -7,7 +7,7 @@ Planejamento Visual: Decidir sobre o conteúdo, imagens e o que cada página exp
 Estilização Criativa: Usar CSS para dar cor, vida e um design prórprio, usando tudo que foi aprendido em cada módulo.
 
 ## Organização: 
-Módulos: Cada módulo tem sua quantidade de exercicios, vou separar os módulos de 1 a 5 e recriar os `index.html`.
+Módulos: Cada módulo tem sua quantidade de exercicios, vou separar os módulos de 1 a 5 e recriar os exercicio (`index.html`) qeu fiz para cada um.
 
 ## Para acompanhar
 Exercicios foram separados por modulos de 1 a 5:
