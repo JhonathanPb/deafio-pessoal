@@ -12,5 +12,5 @@ Módulos: Cada módulo tem sua quantidade de exercícios. Vou separar os módulo
 ## Para acompanhar:
 [Exercicios que foram feitos em aula](https://github.com/JhonathanPb/html-css)
 
-Vamos nos conectar?
+### Vamos nos conectar?
 [Linkedin](https://www.linkedin.com/in/jhonathanpablo)
