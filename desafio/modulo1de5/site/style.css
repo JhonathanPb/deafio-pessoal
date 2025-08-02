@@ -18,6 +18,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-.destaque {
-    font-style: italic;
+.semespacamento {
+    margin-bottom: -10px;
 }
+

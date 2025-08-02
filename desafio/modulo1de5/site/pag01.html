@@ -11,14 +11,29 @@
 </head>
 <body>
     <h1>Parágrafo</h1>
-    <p>A tag <code class="tag">&lt;p&gt;/&lt;/p&gt;</code> é uma das mais importantes do HTML. De forma bem simples, ela serve para criar um parágrafo de texto. Pense nela como a forma correta de escrever um parágrafo em um documento digital, assim como você faria em um livro ou em um editor de texto. Aqui estão os pontos principais para você entender como ela funciona:</p>
+    <p class="recuo-paragrafo">A tag <code class="tag">&lt;p&gt;</code> é uma das mais importantes do HTML. De forma bem simples, ela serve para criar um parágrafo de texto. Pense nela como a forma correta de escrever um parágrafo em um documento digital, assim como você faria em um livro ou em um editor de texto. Aqui estão os pontos principais para você entender como ela funciona:</p>
     <ul>
-        <li>Pra que serve?</li>
-        <p>A função principal da tag <code class="tag">&lt;p&gt;/&lt;/p&gt;</code> é dar significado ao seu texto. Ela diz ao navegador: "o texto aqui dentro é um parágrafo".</p>
-        <li></li>
-
-</p>
+        <li class="semespacamento">Pra que serve?</li>
+        <p>A função principal da tag <code class="tag">&lt;p&gt;</code> é dar significado ao seu texto. Ela diz ao navegador: "o texto aqui dentro é um parágrafo".</p>
+        <li class="semespacamento">É um Elemento de Blocos:</li>
+        <p>Isso significa que, por padrão, a tag <code class="tag">&lt;p&gt;</code>  se comporta como uma caixa que ocupa a largura inteira da tela. É por isso que, sempre que você usa uma tag <code class="tag">&lt;p&gt;</code> , o texto seguinte automaticamente começa em uma nova linha, com um espaço extra acima e abaixo.</p>
+        <li class="semespacamento">É Necessário Fechamento:</li>
+        <p>Sempre que abrir a tag com <code class="tag">&lt;p&gt;</code> e nescessário fechá-la com <code class="tag">&lt;/p&gt;</code>. Todo o texto do seu parágrafo deve ficar entre elas.</p>
+        <li class="semespacamento">Exemplo:</li>
+        <p>Imagine que você tem o seguinte código:</p>
+        <pre>
+            <code>
+                <p class="semespacamento">Este é o primeiro parágrafo do meu site. Ele tem uma ideia completa e é formatado como um bloco de texto.</p>
+                <code class="tag">&lt;p&gt;</code>Este é o primeiro parágrafo do meu site. Ele tem uma ideia completa e é formatado como um bloco de texto.<code class="tag">&lt;/p&gt;</code>
+                <p class="semespacamento">Este é o segundo parágrafo. Ele começa automaticamente em uma nova linha, separado do primeiro.</p>
+                <code class="tag">&lt;p&gt;</code>Este é o segundo parágrafo. Ele começa automaticamente em uma nova linha, separado do primeiro.<code class="tag">&lt;/p&gt;</code>
+            </code>
+        </pre>
     </ul>
+    <p>Em resumo, use a tag code class="tag">&lt;p&gt;</code> sempre que precisar de um bloco de texto. Deixe o trabalho de "dar cor" ou "mudar o tamanho" para o CSS, mas a estrutura de parágrafo é responsabilidade do HTML</p>
+
+    <h1>Quebra de Linha</h1>
+    <p class="recuo-paragrafo"></p>
     
 </body>
 </html>
