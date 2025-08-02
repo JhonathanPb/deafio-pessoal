@@ -10,7 +10,9 @@ Estilização Criativa: Usar CSS para dar cor, vida e um design próprio, aplica
 Módulos: Cada módulo tem sua quantidade de exercícios. Vou separar os módulos de 1 a 5, recriar e aplicar os ensinamentos dos exercícios em um único 'index.html' (e talvez algumas páginas).
 
 ## Para acompanhar:
+- Para ver os exercicios clique no link:
 [Exercicios que foram feitos em aula](https://github.com/JhonathanPb/html-css)
+
 
 ### Vamos nos conectar?
 [Linkedin](https://www.linkedin.com/in/jhonathanpablo)
