@@ -10,18 +10,19 @@
     <title>Inserindo imagens</title>
 </head>
 <body>
-    <h1>Inserindo Favicon <img src="favicon.ico" alt="Meu Favicon"></h1>
-    <p class="recuo-paragrafo">Um favicon (abreviação de "favorite icon", ou ícone de favoritos) é um pequeno ícone visual que representa o seu site.</p>
-    <p>Ele aparece em alguns lugares-chave no navegador como: 
-        <ul>
-            <li>Na aba do navegador, ao lado do título da página.</li>
-            <li>Na lista de favoritos e no histórico.</li>
-            <li>Na tela inicial do celular, se o site for adicionado como um atalho.</li>
-        </ul>
-        <p>Exemplo:
-            <p><img class="imagem-exemplo" src="imagens/favicon.jpg" alt="Meu Favicon"></p>
-        </p>
-    </p>
+    <h1>Inserindo Imagens</h1>
+        <h2>Inserindo Favicon <img src="favicon.ico" alt="Meu Favicon"></h2>
+             <p class="recuo-paragrafo">Um favicon (abreviação de "favorite icon", ou ícone de favoritos) é um pequeno ícone visual que representa o seu site.</p>
+             <p>Ele aparece em alguns lugares-chave no navegador como: 
+              <ul>
+               <li>Na aba do navegador, ao lado do título da página.</li>
+               <li>Na lista de favoritos e no histórico.</li>
+               <li>Na tela inicial do celular, se o site for adicionado como um atalho.</li>
+              </ul>
+             <p>Exemplo:
+             <p><img class="imagem-exemplo" src="imagens/favicon.jpg" alt="Meu Favicon"></p>
+             </p>
+             </p>
     <p>A função principal do favicon é ajudar o usuário a identificar rapidamente seu site entre várias abas abertas, reforçando a identidade visual e a marca.</p>
     <p> Para adicionar um favicon, você usa a tag <code class="fundo">&lt;link&gt;</code> no <code class="tag">&lt;head&gt;</code> do seu arquivo HTML, como no exemplo abaixo:
         <pre>
@@ -35,17 +36,17 @@
     </p>
     <p>Dessa forma, o navegador sabe qual imagem deve usar como ícone para a sua página.</p>
 
-    <h1>Inserindo Imagens de Forma Interna</h1>
-    <p class="recuo-paragrafo">Para inserir uma imagem em uma página HTML, você usa a tag <code class="fundo">&lt;img&gt;</code>.
+    <h2>Inserindo Imagens de Forma Interna</h2>
+        <p class="recuo-paragrafo">Para inserir uma imagem em uma página HTML, você usa a tag <code class="fundo">&lt;img&gt;</code>.
         Esta é uma tag "vazia", o que significa que ela não precisa de uma tag de fechamento (<code class="tag">&lt;/img&gt;</code>). Em vez disso, todas as informações que ela precisa são passadas através de atributos.
-    </p>
-    <h2>Como Inserir Uma Imagem</h2>
-    <p>Você precisa de dois atributos principais para que a imagem funcione corretamente:
-        <ol type="1">
-            <li><code class="fundo">&lt;src&gt;</code> (Source - Fonte): Este atributo é obrigatório. Ele indica o caminho (endereço) do arquivo da imagem que você quer mostrar.</li>
-            <li><code class="fundo">&lt;alt&gt;</code>(Alternative Text - Texto Alternativo): Este atributo é essencial. Ele fornece uma descrição da imagem. Se a imagem não puder ser carregada por algum motivo, o texto do <code class="tag"><span class="fundo">&lt;alt&gt;</span></code> será exibido no lugar. Ele também é fundamental para a acessibilidade (para leitores de tela) e para o SEO.</li>
-        </ol>
-    </p>
+         </p>
+             <h3>Como Inserir Uma Imagem</h3>
+                 <p>Você precisa de dois atributos principais para que a imagem funcione corretamente:
+                      <ol type="1">
+                          <li><code class="fundo">&lt;src&gt;</code> (Source - Fonte): Este atributo é obrigatório. Ele indica o caminho (endereço) do arquivo da imagem que você quer mostrar.</li>
+                           <li><code class="fundo">&lt;alt&gt;</code>(Alternative Text - Texto Alternativo): Este atributo é essencial. Ele fornece uma descrição da imagem. Se a imagem não puder ser carregada por algum motivo, o texto do <code class="tag"><span class="fundo">&lt;alt&gt;</span></code> será exibido no lugar. Ele também é fundamental para a acessibilidade (para leitores de tela) e para o SEO.</li>
+                      </ol>
+                 </p>
     <p>Exemplo:
         <pre>
             <code>
@@ -55,21 +56,21 @@
     </p>
     
     <h2>Pontos Chave:</h2>
-    <ul>
-        <li>Caminho da Imagem (<code class="fundo">&lt;src&gt;</code>): O valor pode ser um caminho relativo (ex: imagens/favicon.jpg) se a imagem estiver na sua própria pasta, ou um caminho absoluto (ex: https://www.site.com/imagem.jpg) se a imagem estiver em outro servidor.</li>
-        <li>Descrição (<code class="fundo">&lt;alt&gt;</code>): Use sempre o alt. Ele é a "voz" da sua imagem para quem não consegue vê-la.</li>
-        <li>Tamanho: Embora você possa usar os atributos width e height no HTML, a forma mais moderna e recomendada de controlar o tamanho da imagem é usando CSS, pois isso facilita a criação de sites responsivos que se adaptam a diferentes telas.</li>
-    </ul>
+         <ul>
+          <li>Caminho da Imagem (<code class="fundo">&lt;src&gt;</code>): O valor pode ser um caminho relativo (ex: imagens/favicon.jpg) se a imagem estiver na sua própria pasta, ou um caminho absoluto (ex: https://www.site.com/imagem.jpg) se a imagem estiver em outro servidor.</li>
+          <li>Descrição (<code class="fundo">&lt;alt&gt;</code>): Use sempre o alt. Ele é a "voz" da sua imagem para quem não consegue vê-la.</li>
+          <li>Tamanho: Embora você possa usar os atributos width e height no HTML, a forma mais moderna e recomendada de controlar o tamanho da imagem é usando CSS, pois isso facilita a criação de sites responsivos que se adaptam a diferentes telas.</li>
+          </ul>
     <p>Em resumo, a tag <code class="fundo">&lt;img&gt;</code> é a porta de entrada para imagens no HTML, e os atributos src e alt são as chaves para que ela funcione de forma completa e acessível.</p>
 
-    <h1>Inserindo Imagens de Forma Externa</h1>
-    <p class="recuo-paragrafo">O uso de imagens externas, ou seja, de URLs que não estão no seu próprio projeto, funciona de forma muito similar a quando você insere uma imagem interna. A grande diferença está em como o navegador encontra o arquivo.</p>
-    <p>Como Funciona a Inserção de Imagens Externas</p>
-    <ol type="1">
-        <li>Caminho Absoluto: Em vez de dar um caminho relativo (por exemplo, <code class="fundo">imagens/foto.jpg</code>), você fornece um caminho completo, que inclui o protocolo (<code class="fundo">http:// ou https://</code>), o domínio (<code class="fundo">www.site.com.br</code>) e a localização exata da imagem no servidor.</li>
-        <li>Solicitação ao Servidor: Quando a página HTML é carregada, o navegador lê a tag <code class="fundo">&lt;src&gt;</code> e o valor do atributo src. Em seguida, ele faz uma "solicitação" separada para o servidor onde a imagem está hospedada.</li>
-        <li>Carregamento da Imagem: O servidor de origem envia o arquivo da imagem para o navegador do usuário, que então a exibe na posição correta da sua página.</li>
-    </ol>
+    <h2>Inserindo Imagens de Forma Externa</h2>
+         <p class="recuo-paragrafo">O uso de imagens externas, ou seja, de URLs que não estão no seu próprio projeto, funciona de forma muito similar a quando você insere uma imagem interna. A grande diferença está em como o navegador encontra o arquivo.</p>
+         <p>Como Funciona a Inserção de Imagens Externas</p>
+            <ol type="1">
+               <li>Caminho Absoluto: Em vez de dar um caminho relativo (por exemplo, <code class="fundo">imagens/foto.jpg</code>), você fornece um caminho completo, que inclui o protocolo (<code class="fundo">http:// ou https://</code>), o domínio (<code class="fundo">www.site.com.br</code>) e a localização exata da imagem no servidor.</li>
+               <li>Solicitação ao Servidor: Quando a página HTML é carregada, o navegador lê a tag <code class="fundo">&lt;src&gt;</code> e o valor do atributo src. Em seguida, ele faz uma "solicitação" separada para o servidor onde a imagem está hospedada.</li>
+              <li>Carregamento da Imagem: O servidor de origem envia o arquivo da imagem para o navegador do usuário, que então a exibe na posição correta da sua página.</li>
+          </ol>
     <p><strong>Pontos de Atenção</strong>
         <ul>
             <li>Velocidade de Carregamento: A velocidade com que a imagem externa é carregada depende da conexão do seu usuário e da velocidade do servidor onde a imagem está. Se o servidor for lento, sua página pode demorar mais para carregar.</li>
@@ -78,7 +79,7 @@
         </ul>
     </p>
     <p>Exemplo:</p>
-    <img class="imagem-exemplo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Html5_dise%C3%B1o_web.png/600px-Html5_dise%C3%B1o_web.png?20180726103553" alt="Logo HTML5" title="Logo HTML5">
+         <img class="imagem-exemplo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Html5_dise%C3%B1o_web.png/600px-Html5_dise%C3%B1o_web.png?20180726103553" alt="Logo HTML5" title="Logo HTML5">
     <pre>
         <code>
             <code>&lt;img class="imagem-exemplo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Html5_dise%C3%B1o_web.png/600px-Html5_dise%C3%B1o_web.png?20180726103553" alt="Logo HTML5" title="Logo HTML5"&gt;</code>

@@ -6,10 +6,49 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    
-    <title>Document</title>
+
+    <title>Hierarquia de Títulos</title>
 </head>
 <body>
+    <h1>A Hierarquia de Títulos no HTML</h1>
+         <p class="recuo-paragrafo">Imagine a página HTML como um livro ou um artigo de jornal. A hierarquia de     títulos serve para organizar o conteúdo, como se fossem os títulos e subtítulos que você já conhece.
+         Em HTML, usamos as tags de <code class="fundo">&lt;h1&gt;</code> a <code class="fundo">&lt;h6&gt;</code> para essa organização, onde o <code class="fundo">&lt;h1&gt;</code> é o mais importante e o <code class="fundo">&lt;h6&gt;</code> é o menos importante.</p>
+     <h2>Títulos</h2>
+         <h3 class="semespacamento">Principal (<code>&lt;h1&gt;</code>):</h3>
+             <p>Pense nele como o título do livro ou a manchete principal do jornal. Ele deve ser usado para o tópico mais importante de toda a página. Por isso, a regra de ouro é: <strong>use apenas um</strong> <code class="fundo">&lt;h1&gt;</code> <strong>por página</strong>.</p>
+         <h3 class="semespacamento">Seções Principais (<code>&lt;h2&gt;</code>):</h3>
+             <p>São os títulos dos <strong>capítulos</strong> ou as seções principais do seu texto. Eles dividem o conteúdo em partes importantes, logo abaixo do título principal.</p>
+         <h3 class="semespacamento">Subseções (<code>&lt;h3&gt;</code>):</h3>
+             <p>São os <strong>subtítulos</strong> dentro dos capítulos. Eles organizam o conteúdo de uma seção <code class="fundo">&lt;h2&gt;</code> em partes menores.</p>
+         <h3 class="semespacamento">&lt;h4&gt;&lt;h5&gt;&lt;h6&gt;:</h3>
+             <p>São usados para aprofundar ainda mais a organização, como os subtítulos dentro dos subtítulos.</p>
     
+     <h2>Por que essa hierarquia é tão importante?</h2>
+         <p class="recuo-paragrafo">A hierarquia de títulos não é apenas sobre o tamanho da fonte (você controla isso com CSS). Ela tem três funções essenciais:</p>
+    <ol type="1">
+        <li class="semespacamento"><strong>organização:</strong></li>
+        <p>Ajuda a estruturar seu conteúdo de forma lógica, como um sumário.</p>
+        <li class="semespacamento"><strong>Acessibilidade:</strong></li>
+        <p>Leitores de tela (usados por pessoas com deficiência visual) usam os títulos para navegar na página. Eles podem "pular" de um <code class="fundo">&lt;h2&gt;</code> para o próximo para encontrar a seção que querem</p>
+        <li class="semespacamento"><strong>SEO (Otimização para Buscadores):</strong></li>
+        <p>O Google e outros buscadores usam os títulos para entender o tópico e a estrutura da sua página, o que ajuda a ranqueá-la melhor nos resultados de pesquisa.</p>
+    </ol>
+     <p>Exemplo Prático: Veja como usar a hierarquia de forma correta</p>
+    <pre>
+        <code>
+           <code>&lt;h1&gt;</code>O Guia Definitivo de Programação Web<code>&lt;/h1&gt;</code>
+
+            <code>&lt;h2&gt;</code>Capítulo 1: O Básico do HTML<code>&lt;/h2&gt;</code>
+                <code>&lt;h3&gt;</code>1.1 O que é HTML?<code>&lt;/h3&gt;</code>
+                <code>&lt;p&gt;</code>HTML é a linguagem de marcação que...<code>&lt;/p&gt;</code>
+                <code>&lt;h3&gt;</code>1.2 As tags principais<code>&lt;/h3&gt;</code>
+                <code>&lt;p&gt;</code>As tags mais comuns são...<code>&lt;/p&gt;</code>
+
+            <code>&lt;h2&gt;</code>Capítulo 2: Estilizando com CSS<code>&lt;/h2&gt;</code>
+                <code>&lt;h3&gt;</code>2.1 Seletores<code>&lt;/h3&gt;</code>
+                <code>&lt;p&gt;</code>Existem diferentes tipos de seletores...<code>&lt;/p&gt;</code>
+        </code>
+    </pre>
+    <p>Em resumo, pense nas tags de título como uma escada. Comece sempre no degrau mais alto (<code class="fundo">&lt;h1&gt;</code>) e desça um degrau por vez (<code class="fundo">&lt;h2&gt;</code>, <code class="fundo">&lt;h3&gt;</code>), sem pular, para manter seu conteúdo bem estruturado.</p>
 </body>
 </html>
