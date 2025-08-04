@@ -1,11 +1,11 @@
 @charset "UTF-8";
 
-body {
+body { /*Definições de fonte e tamanho*/
     font-family: Arial, Helvetica, sans-serif;
     font-size: small;
 }
 
-h1 {
+h1 { 
     margin-top: 50px;
     margin-bottom: 50px;
     
@@ -15,16 +15,16 @@ h2, h3, h4 {
     margin-top: 30px;
 }
 
-.recuo-paragrafo {
+.recuo-paragrafo { /*Recuo de paragrafo, igual aos livros*/
     text-indent: 2em;
 }
 
-.espacamento {
+.espacamento { 
     margin-top: 50px;
     margin-bottom: 20px;
 }
 
-.semespacamento {
+.semespacamento { /*Tira espaçamento entre as linhas*/
     margin-bottom: -10px;
 }
 
@@ -32,19 +32,23 @@ li {
     margin-top: 5px;
     margin-bottom: 5px;
 }
-.fundo {
+.fundo { /*Usado para referir-se as Tags*/
     background-color: #07070791;
     font-family: monospace; 
     padding: 2px 4px;
     border-radius: 4px; 
 }
 
-.imagem-exemplo {
+.imagem-exemplo { 
     width: 30%;
     height: auto;
 }
 
-pre {
+pre { 
     overflow-x: auto;
+}
+
+..negrito {
+    font-weight: 700;
 }
 
