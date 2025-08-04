@@ -23,27 +23,27 @@
         </p>
     </p>
     <p>A função principal do favicon é ajudar o usuário a identificar rapidamente seu site entre várias abas abertas, reforçando a identidade visual e a marca.</p>
-    <p> Para adicionar um favicon, você usa a tag <code class="tag">&lt;link&gt;</code> no <code class="tag">&lt;head&gt;</code> do seu arquivo HTML, como no exemplo abaixo:
+    <p> Para adicionar um favicon, você usa a tag <code class="fundo">&lt;link&gt;</code> no <code class="tag">&lt;head&gt;</code> do seu arquivo HTML, como no exemplo abaixo:
         <pre>
             <code>
-                <code class="tag">&lt;head&gt;</code>
-                <code class="tag">&lt;link</code> rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-                <code class="tag">&lt;title&gt;</code>Inserindo Imagens<code class="tag">&lt;/title&gt;</code>
-                <code class="tag">&lt;head&gt;</code>
+                <code>&lt;head&gt;</code>
+                <code>&lt;link</code> rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+                <code>&lt;title&gt;</code>Inserindo Imagens<code>&lt;/title&gt;</code>
+                <code>&lt;head&gt;</code>
             </code>
         </pre>
     </p>
     <p>Dessa forma, o navegador sabe qual imagem deve usar como ícone para a sua página.</p>
 
     <h1>Inserindo Imagens de Forma Interna</h1>
-    <p>Para inserir uma imagem em uma página HTML, você usa a tag <code class="tag">&lt;img&gt;</code>.
+    <p>Para inserir uma imagem em uma página HTML, você usa a tag <code class="fundo">&lt;img&gt;</code>.
         Esta é uma tag "vazia", o que significa que ela não precisa de uma tag de fechamento (<code class="tag">&lt;/img&gt;</code>). Em vez disso, todas as informações que ela precisa são passadas através de atributos.
     </p>
     <h2>Como Inserir Uma Imagem</h2>
     <p>Você precisa de dois atributos principais para que a imagem funcione corretamente:
         <ol type="1">
-            <li><code class="tag"><span class="fundo">&lt;src&gt;</span></code> (Source - Fonte): Este atributo é obrigatório. Ele indica o caminho (endereço) do arquivo da imagem que você quer mostrar.</li>
-            <li><code class="tag"><span class="fundo">&lt;alt&gt;</span></code>(Alternative Text - Texto Alternativo): Este atributo é essencial. Ele fornece uma descrição da imagem. Se a imagem não puder ser carregada por algum motivo, o texto do <code class="tag"><span class="fundo">&lt;alt&gt;</span></code> será exibido no lugar. Ele também é fundamental para a acessibilidade (para leitores de tela) e para o SEO.</li>
+            <li><code class="fundo">&lt;src&gt;</code> (Source - Fonte): Este atributo é obrigatório. Ele indica o caminho (endereço) do arquivo da imagem que você quer mostrar.</li>
+            <li><code class="fundo">&lt;alt&gt;</code>(Alternative Text - Texto Alternativo): Este atributo é essencial. Ele fornece uma descrição da imagem. Se a imagem não puder ser carregada por algum motivo, o texto do <code class="tag"><span class="fundo">&lt;alt&gt;</span></code> será exibido no lugar. Ele também é fundamental para a acessibilidade (para leitores de tela) e para o SEO.</li>
         </ol>
     </p>
     <p>Exemplo:
@@ -56,8 +56,8 @@
     
     <h2>Pontos Chave:</h2>
     <ul>
-        <li>Caminho da Imagem (<code class="tag"><span class="fundo">&lt;src&gt;</span></code>): O valor pode ser um caminho relativo (ex: imagens/favicon.jpg) se a imagem estiver na sua própria pasta, ou um caminho absoluto (ex: https://www.site.com/imagem.jpg) se a imagem estiver em outro servidor.</li>
-        <li>Descrição (<code class="tag"><span class="fundo">&lt;alt&gt;</span></code>): Use sempre o alt. Ele é a "voz" da sua imagem para quem não consegue vê-la.</li>
+        <li>Caminho da Imagem (<code class="fundo">&lt;src&gt;</code>): O valor pode ser um caminho relativo (ex: imagens/favicon.jpg) se a imagem estiver na sua própria pasta, ou um caminho absoluto (ex: https://www.site.com/imagem.jpg) se a imagem estiver em outro servidor.</li>
+        <li>Descrição (<code class="fundo">&lt;alt&gt;</code>): Use sempre o alt. Ele é a "voz" da sua imagem para quem não consegue vê-la.</li>
         <li>Tamanho: Embora você possa usar os atributos width e height no HTML, a forma mais moderna e recomendada de controlar o tamanho da imagem é usando CSS, pois isso facilita a criação de sites responsivos que se adaptam a diferentes telas.</li>
     </ul>
     <p>Em resumo, a tag <code class="fundo">&lt;img&gt;</code> é a porta de entrada para imagens no HTML, e os atributos src e alt são as chaves para que ela funcione de forma completa e acessível.</p>
@@ -67,7 +67,7 @@
     <p>Como Funciona a Inserção de Imagens Externas</p>
     <ol type="1">
         <li>Caminho Absoluto: Em vez de dar um caminho relativo (por exemplo, imagens/foto.jpg), você fornece um caminho completo, que inclui o protocolo (http:// ou https://), o domínio (www.site.com.br) e a localização exata da imagem no servidor.</li>
-        <li>Solicitação ao Servidor: Quando a página HTML é carregada, o navegador lê a tag <<code class="tag"><span class="fundo">&lt;src&gt;</code> e o valor do atributo src. Em seguida, ele faz uma "solicitação" separada para o servidor onde a imagem está hospedada.</li>
+        <li>Solicitação ao Servidor: Quando a página HTML é carregada, o navegador lê a tag <code class="fundo">&lt;src&gt;</code> e o valor do atributo src. Em seguida, ele faz uma "solicitação" separada para o servidor onde a imagem está hospedada.</li>
         <li>Carregamento da Imagem: O servidor de origem envia o arquivo da imagem para o navegador do usuário, que então a exibe na posição correta da sua página.</li>
     </ol>
 </body>
