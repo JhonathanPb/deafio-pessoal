@@ -77,7 +77,33 @@
         <li><strong>SEO (Otimização para Buscadores)</strong>: Mecanismos de busca como o Google usam a semântica para entender a estrutura e a importância do conteúdo da sua página. Uma página com títulos (<code class="fundo">&lt;h&gt;1</code>), parágrafos (<code class="fundo">&lt;p&gt;</code>) e seções bem definidas tende a ser melhor classificada.</li>
         <li><strong>Manutenção do Código</strong>: Seu código fica mais limpo e fácil de entender. Olhando para <code class="fundo">&lt;n&gt;av</code>, um desenvolvedor sabe na hora que se trata do menu, sem precisar ler uma classe como .menu-superior-principal.</li>
     </ol>
-    
+    <h4>Um Exemplo Simples</h4>
+    <p>Veja a diferença entre um código semântico e um não semântico:</p>
+    <p>Código <strong>Não Semântico</strong> (Ruim):</p>
+    <pre>
+        <code>
+             <code>&lt;div class="header"&gt;</code>
+                <code>&lt;&gt;</code>div class="menu"<code>&lt;&gt;</code>...<code>&lt;&gt;</code>/div<code>&lt;&gt;</code>
+             <code>&lt;&gt;</code>/div<code>&lt;&gt;</code>
+             <code>&lt;&gt;</code>div class="main"<code>&lt;&gt;</code>
+                <code>&lt;&gt;</code>div class="titulo"<code>&lt;&gt;</code>...<code>&lt;&gt;</code>/div<code>&lt;&gt;</code>
+                <code>&lt;&gt;</code>div class="paragrafo"<code>&lt;&gt;</code>...<code>&lt;&gt;</code>/div<code>&lt;&gt;</code>
+             <code>&lt;/div&gt;</code>
+        </code>
+    </pre>
+    <p>Código <strong>Semântico</strong> (Bom):</p>
+    <pre>
+        <code>
+            <code>&lt;&gt;</code>header<code>&lt;&gt;</code>
+                <code>&lt;&gt;</code>nav<code>&lt;&gt;</code>...<code>&lt;&gt;</code>/nav<code>&lt;&gt;</code>
+            <code>&lt;&gt;</code>/header>
+            <code>&lt;&gt;</code>main<code>&lt;&gt;</code>
+                <code>&lt;&gt;</code>h1<code>&lt;&gt;</code>...<code>&lt;&gt;</code>/h1<code>&lt;&gt;</code>
+                <code>&lt;&gt;</code>p<code>&lt;&gt;</code>...<code>&lt;&gt;</code>/p<code>&lt;&gt;</code>
+            <code>&lt;&gt;</code>/main<code>&lt;&gt;</code>
+        </code>
+    </pre>
+    <p>No segundo exemplo, o código já se explica. Você não precisa de classes para entender a sua estrutura. A regra de ouro é: <strong>se existe uma tag que descreve o seu conteúdo, use-a</strong>.</p>
 
     <p style="text-align: center;"><a href="index.html" target="_self" rel="prev">Página Inicial</a></p>
 </body>
