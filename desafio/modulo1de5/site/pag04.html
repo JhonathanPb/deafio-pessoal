@@ -103,5 +103,146 @@
         <li><code class="fundo">&lt;em&gt;</code>diz: "Deixe esse texto com o visual de negrito."</li>
     </ul>
     <p class="recuo-paragrafo">A melhor prática na web moderna é usar as tags que dão significado ao conteúdo (<code class="fundo">&lt;strong&gt;</code>, <code class="fundo">&lt;em&gt;</code>, <code class="fundo">&lt;mark&gt;</code>) e deixar o CSS para controlar o visual, como o tipo de fonte, cor ou tamanho. Use <code class="fundo">&lt;b&gt;</code> e <code class="fundo">&lt;i&gt;</code> apenas em casos muito específicos, quando não há um significado extra a ser transmitido, como em nomes de espécies ou termos técnicos.</p>
+
+    <h2>Outras Formatações de Texto no HTML</h2>
+    <p>Além das formatações básicas, o HTML oferece tags que dão um significado mais específico ao conteúdo. Elas são essenciais para organizar textos técnicos e citações.</p>
+    <h3>Código Fonte e Pré-Formatado</h3>
+    <p>Essas tags são perfeitas para exibir trechos de código em seus sites.</p>
+    <ul>
+        <li><code class="fundo">&lt;code&gt;</code>: Usada para marcar um pequeno trecho de código dentro de um parágrafo. O navegador geralmente exibe o texto com uma fonte monoespaçada.</li>
+        <li><code class="fundo">&lt;pre&gt;</code>: Usada para um bloco de texto que já está pré-formatado. O navegador vai preservar todos os espaços, quebras de linha e tabulações exatamente como você os digitou. É ideal para blocos maiores de código.</li>
+        <p><strong>Exemplo:</strong></p>
+        <p>Para criar um parágrafo, você usa o comando <code class="fundo">&lt;p&gt;</code>.</p>
+            <pre>
+            <code>
+                namespace CalculadoraDeIdade
+                {
+
+                    class Program
+                    {
+                      
+                        static void Main(string[] args)
+                        {
+                            
+                            Console.WriteLine("Bem-vindo à calculadora de idade!");
+                            Console.WriteLine("Por favor, digite o ano de seu nascimento:");
+
+                           
+                            string anoNascimentoTexto = Console.ReadLine();
+                            int anoNascimento = int.Parse(anoNascimentoTexto);
+                            int anoAtual = DateTime.Now.Year;
+                            int idade = anoAtual - anoNascimento;
+
+                            Console.WriteLine($"Você tem {idade} anos.");
+                        }
+                    }
+                }
+            </code>
+            </pre>
+    </ul>
+    <h3>Citações</h3>
+    <ul>
+        <li><code class="fundo">&lt;blockquote&gt;</code>: Usada para citar um trecho longo de texto que foi retirado de outra fonte. O navegador costuma exibir a citação com um recuo (indentação) nas margens.</li>
+        <li><code class="fundo">&lt;q&gt;</code>: Usada para uma citação curta dentro de um parágrafo. O navegador geralmente adiciona as aspas automaticamente.</li>
+    </ul>
+    <p><strong>Exemplo:</strong></p>
+    <p>Como disse Albert Einstein, <q>a imaginação é mais importante que o conhecimento.</q></p>
+    <pre>
+        <code>
+            <code>&lt;p&gt;</code>Como disse Albert Einstein, <strong><code>&lt;q&gt;</code></strong> imaginação é mais importante que o conhecimento.<strong><code>&lt;/q&gt;</code></strong><code>&lt;/p&gt;</code>
+        </code>
+    </pre>
+        <blockquote>
+            <p>Qualquer um que nunca cometeu um erro nunca tentou nada novo.</p>
+            <footer>— Albert Einstein</footer>
+        </blockquote>
+    <pre>
+        <code>
+            <code>&lt;blockquote&gt;</code>
+                <code>&lt;p&gt;</code>Qualquer um que nunca cometeu um erro nunca tentou nada novo.<code>&lt;/p&gt;</code>
+                <code>&lt;footer&gt;</code>— Albert Einstein<code>&lt;/footer&gt;</code>
+            <code>&lt;/blockquote&gt;</code>
+        </code>
+    </pre>
+    <h3>Abrevoações</h3>
+    <ul>
+        <li><code class="fundo">&lt;abbr&gt;</code>: Usada para marcar uma abreviação ou um acrônimo. O atributo title é essencial aqui, pois ele exibe o significado completo da abreviação quando o usuário passa o mouse sobre ela.</li>
+        <p>Aprender <abbr title="HyperText Markup Language">HTML</abbr> é o primeiro passo para criar sites.</p>
+    <pre>
+        <code>
+            <code>&lt;p&gt;</code>Aprender <code>&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;</code> é o primeiro passo para criar sites.<code>&lt;/p&gt;</code>
+        </code>
+    </pre>    
+    </ul>
+    <h3>Texto Invertido</h3>
+    <ul>
+        <li><code class="fundo">&lt;bdo&gt;</code>: A tag bdo significa "Bi-Directional Override" (Substituição Bidirecional). Ela é usada para inverter a direção do texto, o que é útil em sites que misturam idiomas que se lêem da esquerda para a direita (como o português) com idiomas que se lêem da direita para a esquerda (como o árabe).</li>
+    </ul>
+    <p><strong>Exemplo:</strong></p>
+    <p>O nome dele é <bdo dir="rtl">José</bdo>.</p>
+    <pre>
+        <code>
+            <code>&lt;p&gt;</code>O nome dele é <code>&lt;bdo dir="rtl"&gt;José&lt;bdo&gt;</code>.<code>&lt;/p&gt;</code>
+        </code>
+    </pre>
+    <p>Neste caso, a palavra "José" foi exibida da direita para a esquerda. O atributo dir com o valor "rtl" (right to left) faz essa inversão.</p>
+
+    <h2>Listas no HTML: Ordenadas e Não Ordenadas</h2>
+    <h3>Lista Não Ordenadas <code>&lt;ul&gt;</code></h3>
+    <p>No HTML, as listas são usadas para agrupar itens relacionados. Existem dois tipos principais, e a diferença entre eles está na importância da <strong>ordem</strong>.</p>
+    <p>A lista não ordenada é usada quando a sequência dos itens não importa.</p>
+    <ul>
+        <li><strong>Tag</strong>: A lista inteira é envolvida pela tag <code>&lt;ul&gt;</code> (de "unordered list").</li>
+        <li><strong>Itens</strong>: Cada item da lista é colocado dentro de uma tag <code>&lt;li&gt;</code> (de "list item").</li>
+        <li><strong>Visual</strong>: O navegador exibe os itens com marcadores, geralmente bolinhas ou quadrados.</li>
+    </ul>
+    <p>Pense em uma lista de compras: a ordem dos itens não faz diferença para a sua finalidade.</p>
+    <p><strong>Exemplo:</strong></p>
+    <ul>
+        <li>Café</li>
+        <li>Pão</li>
+        <li>Leite</li>
+    </ul>
+        <pre>
+            <code>
+                <code>&lt;ul&gt;</code>
+                    <code>&lt;li&gt;</code>Café<code>&lt;/li&gt;</code>
+                    <code>&lt;li&gt;</code>Pão<code>&lt;/li&gt;</code>
+                    <code>&lt;li&gt;</code>Leite<code>&lt;/li&gt;</code>
+                <code>&lt;/ul&gt;</code>
+            </code>
+        </pre>
+    <h3>Lista Ordenada <code>&lt;ol&gt;</code></h3>
+    <p>A lista ordenada é usada quando a sequência dos itens é <strong>importante</strong></p>
+    <ol>
+        <li><strong>Tag</strong>: A lista inteira é envolvida pela tag <code>&lt;ol&gt;</code> (de "ordered list").</li>
+        <li><strong>Itens</strong>: Assim como na lista não ordenada, cada item é colocado dentro de uma tag <code>&lt;li&gt;</code></li>
+        <li><strong>Visual</strong>: O navegador exibe os itens com um contador, que pode ser números (o padrão), letras ou numerais romanos.</li>
+    </ol>
+    <p>Pense em uma receita de bolo, onde cada passo precisa ser seguido na ordem certa.</p>
+    <p><strong>Exemplo:</strong></p>
+    <ol>
+        <li>Pré-aqueça o forno.</li>
+        <li>Misture os ingredientes.</li>
+        <li>Despeje a massa na forma.</li>
+        <li>Asse por 40 minutos.</li>
+    </ol>
+        <pre>
+            <code>
+                <code>&lt;ol&gt;</code>
+                    <code>&lt;li&gt;</code>Pré-aqueça o forno.<code>&lt;/li&gt;</code>
+                    <code>&lt;li&gt;</code><code>&lt;/li&gt;</code>Misture os ingredientes.<code>&lt;li&gt;</code><code>&lt;/li&gt;</code>
+                    <code>&lt;li&gt;</code><code>&lt;/li&gt;</code>Despeje a massa na forma.<code>&lt;li&gt;</code><code>&lt;/li&gt;</code>
+                    <code>&lt;li&gt;</code><code>&lt;/li&gt;</code>Asse por 40 minutos.<code>&lt;li&gt;</code><code>&lt;/li&gt;</code>
+                <code>&lt;/ol&gt;</code>
+            </code>
+        </pre>
+    <h3>Resumo</h3>
+    <ul>
+        Use <ul> para listas onde a ordem não é relevante (como uma lista de recursos, uma lista de tarefas, etc.).
+
+        Use <ol> para listas onde a ordem é crucial (como rankings, instruções passo a passo, sequências, etc.). </ul>
+
+    <p style="text-align: center;"><a href="index.html" target="_self" rel="prev">Página Inicial</a></p>
 </body>
 </html>
