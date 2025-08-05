@@ -239,10 +239,100 @@
         </pre>
     <h3>Resumo</h3>
     <ul>
-        Use <ul> para listas onde a ordem não é relevante (como uma lista de recursos, uma lista de tarefas, etc.).
+        <li>Use <code>&lt;ul&gt;</code> para listas onde a ordem não é relevante (como uma lista de recursos, uma lista de tarefas, etc.).</li>
+        <li>Use <code>&lt;ol&gt;</code> para listas onde a ordem é crucial (como rankings, instruções passo a passo, sequências, etc.). </li>
+    </ul>
+    <p>Lembre-se que o estilo dos marcadores (se são bolinhas, números ou letras) pode ser alterado facilmente com CSS. A escolha entre <code class="fundo">&lt;ul&gt;</code> e <code class="fundo">&lt;ol&gt;</code> é uma questão de semântica, ou seja, de dar o significado correto ao seu conteúdo.</p>
 
-        Use <ol> para listas onde a ordem é crucial (como rankings, instruções passo a passo, sequências, etc.). </ul>
+    <h2>Juntando Listas</h2>
+    <p>No HTML, você junta listas por meio de um processo chamado aninhamento (ou "nesting"). Isso significa colocar uma lista dentro de outra, criando uma estrutura hierárquica.O segredo para aninhar listas corretamente é sempre colocar a lista interna (<code class="fundo">&lt;ul&gt;</code> ou <code class="fundo">&lt;ol&gt;</code>) dentro de um item de lista (<code class="fundo">&lt;li&gt;</code>) da lista principal.</p>
+    <h3>Como Aninhar Listas</h3>
+    <p>A lista aninhada funciona como uma sub-lista. Veja a estrutura:</p>
+    <ul>
+        <li>Você começa com a sua lista principal (<code class="fundo">&lt;ul&gt;</code> ou <code class="fundo">&lt;ol&gt;</code>).</li>
+        <li>Em um dos <code class="fundo">&lt;li&gt;</code> dessa lista, você adiciona um novo par de tags de lista (<code class="fundo">&lt;ul&gt;</code> ou <code class="fundo">&lt;ol&gt;</code>).</li>
+        <li>Dentro dessa nova lista, você adiciona os itens (<code class="fundo">&lt;li&gt;</code>) que pertencem a ela.</li>
+    </ul>
+    <p>O navegador entende essa estrutura e, por padrão, adiciona uma indentação (recuo) para que a sub-lista fique visualmente diferente da lista principal.</p>
+    <p><strong>Exemplo Prático</strong></p>
+    <p>Aqui está um exemplo mostrando uma lista de frutas com uma sub-lista de diferentes tipos de maçã.</p>
+    <p>Minhas frutas favoritas:</p>
+        <ul>
+            <li>Banana</li>
+             <li>Laranja</li>
+             <li>
+             Maçã
+             <ul>
+                <li>Fuji</li>
+                 <li>Gala</li>
+                <li>Verde</li>
+             </ul>
+         </li>
+         <li>Pêra</li>
+        </ul>
+    <pre>
+        <code>
+            <p>Minhas frutas favoritas:</p>
+                <code>&lt;ul&gt;</code>
+                <code>&lt;li&gt;</code>Banana<code>&lt;/li&gt;</code>
+                <code>&lt;li&gt;</code>Laranja<code>&lt;/li&gt;</code>
+                <code>&lt;li&gt;</code>
+                    Maçã
+                    <code>&lt;ul&gt;</code>
+                    <code>&lt;li&gt;</code>Fuji<code>&lt;/li&gt;</code>
+                    <code>&lt;li&gt;</code>Gala<code>&lt;/li&gt;</code>
+                    <code>&lt;li&gt;</code>Verde<code>&lt;/li&gt;</code>
+                    <code>&lt;/ul&gt;</code>
+                <code>&lt;/li&gt;</code>
+                <code>&lt;li&gt;</code>Pêra<code>&lt;/li&gt;</code>
+                <code>&lt;/ul&gt;</code>
+        </code>
+    </pre>
+    <p><strong>O que acontece no código acima:</strong></p>
+    <ul>
+        <li>A lista principal é a de frutas, marcada com <code>&lt;ul&gt;</code>.</li>
+        <li>O item "Maçã" é um <code>&lt;li&gt;</code> da lista principal.</li>
+        <li>Dentro desse <code>&lt;li&gt;</code> (depois da palavra "Maçã"), foi criada uma nova <code>&lt;ul&gt;</code> para os tipos de maçã.</li>
+        <li>Os itens <code>&lt;li&gt;</code> (Fuji, Gala, Verde) pertencem a essa nova lista interna.</li>
+    </ul>
+    <p>Essa mesma lógica se aplica se você quiser aninhar listas ordenadas dentro de não ordenadas, ou vice-versa. A regra é sempre a mesma: uma lista aninhada sempre deve estar dentro de um <code class="fundo">&lt;li&gt;</code>.</p>
 
+    <h2>Lista de Definições <code>&lt;dl&gt;</code></h2>
+    <p>A lista de definições é um tipo de lista no HTML feita para agrupar termos e suas respectivas definições ou descrições. Ela é perfeita para criar glossários, dicionários ou listas de perguntas e respostas.Diferente das listas ordenadas e não ordenadas, que usam a tag <code class="fundo">&lt;li&gt;</code>, a lista de definições usa um conjunto de três tags:</p>
+    <ul>
+        <li><code>&lt;dl&gt;</code> (Definition List): É o contêiner principal que envolve toda a lista de definições.</li>
+        <li><code>&lt;dt&gt;</code> (Definition Term): Marca o termo que será definido.</li>
+        <li><code>&lt;dd&gt;</code> (Definition Description): Contém a definição ou descrição do termo.</li>
+    </ul>
+    <p><strong>Exemplo Prático (Glossário de Termos)</strong></p>
+    <p>A estrutura é muito simples e fácil de entender. A cada par de <code class="fundo">&lt;dt&gt;</code> e <code class="fundo">&lt;dd&gt;</code>, você tem uma definição completa.</p>
+    <dl>
+        <dt>HTML</dt>
+        <dd>Linguagem de Marcação de Hipertexto. É usada para estruturar o conteúdo de uma página web.</dd>
+
+        <dt>CSS</dt>
+        <dd>Folhas de Estilo em Cascata. É a linguagem usada para estilizar e dar o visual a uma página web.</dd>
+
+        <dt>JavaScript</dt>
+        <dd>Linguagem de programação que permite adicionar interatividade a sites.</dd>
+    </dl>
+    <pre>
+        <code>
+            <code>&lt;dl&gt;</code>
+                <code>&lt;dt&gt;</code>HTML<code>&lt;/dt&gt;</code>
+                <code>&lt;dd&gt;</code>Linguagem de Marcação de Hipertexto. É usada para estruturar o conteúdo de uma página web.<code>&lt;/dd&gt;</code>
+
+                <code>&lt;dt&gt;</code>CSS<code>&lt;/dt&gt;</code>
+                <code>&lt;dd&gt;</code>Folhas de Estilo em Cascata. É a linguagem usada para estilizar e dar o visual a uma página web.<code>&lt;/dd&gt;</code>
+
+                <code>&lt;dt&gt;</code>JavaScript<code>&lt;/dt&gt;</code>
+                <code>&lt;dd&gt;</code>Linguagem de programação que permite adicionar interatividade a sites.<code>&lt;/dd&gt;</code>
+            <code>&lt;/dl&gt;</code>
+        </code>
+    </pre>
+    <p>Por padrão, o navegador exibe a definição (<code class="fundo">&lt;dd&gt;</code>) com um pequeno recuo, o que facilita a leitura e a distinção entre o termo e sua definição. Essa é a lista ideal para quando você precisa de uma relação direta de "termo e descrição" no seu conteúdo.</p>
+
+    
     <p style="text-align: center;"><a href="index.html" target="_self" rel="prev">Página Inicial</a></p>
 </body>
 </html>
