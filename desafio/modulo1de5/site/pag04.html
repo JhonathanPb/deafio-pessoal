@@ -39,10 +39,69 @@
             <p>Destaca um trecho de texto como se você tivesse usado um marca-texto. É ideal para realçar palavras-chave em um contexto específico, como o resultado de uma busca.</p>
             <li><strong>Exemplo:</strong></li>
             <p>Sua busca por "HTML" retornou a palavra <mark>HTML</mark> neste parágrafo.</p>
-            <p class="recuo-paragrafo"><code>&lt;p&gt;</code>Sua busca por "HTML" retornou a palavra <code>&lt;mark&gt;</code>HTML<code>&lt;/mark&gt;</code> neste parágrafo.<code>&lt;/p&gt;</code></p>
+            <p class="recuo-paragrafo"><code>&lt;p&gt;</code>Sua busca por "HTML" retornou a palavra <strong><code>&lt;mark&gt;</code></strong>HTML<strong><code>&lt;/mark&gt;</code></strong> neste parágrafo.<code>&lt;/p&gt;</code></p>
         </ul>
     </p>
     <p class="recuo-paragrafo">Para mudar a cor da tag <code class="fundo">&lt;mark&gt;</code>, você precisa usar CSS. Por padrão, os navegadores aplicam um fundo amarelo e texto preto ao <code class="fundo">&lt;mark&gt;</code>.Você pode alterar isso facilmente com as propriedades background-color (para a cor de fundo) e color (para a cor do texto).</p>
     <h2>Texto Grande e Pequeno<code>&lt;small&gt;</code></h2>
+    <p>
+        <ul>
+            <li><strong>Pra que serve:</strong></li>
+            <p>Diminui o tamanho do texto para indicar que ele é "pequeno" por natureza, como letras miúdas, avisos legais, direitos autorais ou notas de rodapé. Não use para diminuir o texto visualmente; para isso, use CSS.</p>
+            <li><strong>Exemplo:</strong></li>
+            <p>Nossos termos de serviço. <small>Atenção: Apenas para maiores de 18 anos.</small></p>
+            <p class="recuo-paragrafo"><code>&lt;p&gt;</code>Nossos termos de serviço. <strong><code>&lt;small&gt;</code></strong>Atenção: Apenas para maiores de 18 anos.<strong><code>&lt;/small&gt;</code></strong><code>&lt;/p&gt;</code></p>
+        </ul>
+    </p>
+    <h2>Texto Deletado<code>&lt;del&gt;</code></h2>
+    <p>
+        <ul>
+            <li><strong>Pra que serve:</strong></li>
+            <p>Marca um trecho de texto que foi removido de um documento. O navegador geralmente o exibe com uma linha sobre o texto (tachado).</p>
+            <li><strong>Exemplo:</strong></li>
+            <p>O preço original era <del>R$ 50,00</del>. Agora custa R$ 35,00.</p>
+            <p class="recuo-paragrafo"><code>&lt;p&gt;</code>O preço original era <strong><code>&lt;del&gt;</code></strong>R$ 50,00<strong><code>&lt;/del&gt;</code></strong>. Agora custa R$ 35,00.<code>&lt;/p&gt;</code></p>
+        </ul>
+    </p>
+    <h2>Texto Inserido<code>&lt;ins&gt;</code></h2>
+    <p>
+        <ul>
+            <li><Strong>Pra que serve:</Strong></li>
+            <p>Marca um trecho de texto que foi adicionado a um documento. É o oposto de <code class="fundo">&lt;del&gt;</code>. Por padrão, o navegador o exibe sublinhado.</p>
+            <li><strong>Exemplo:</strong></li>
+            <p>Nosso novo plano agora inclui <ins>acesso a todas as plataformas</ins>.</p>
+            <p class="recuo-paragrafo"><code>&lt;p&gt;</code>Nosso novo plano agora inclui <strong><code>&lt;ins&gt;</code></strong>acesso a todas as plataformas<strong><code>&lt;/ins&gt;</code></strong>.<code>&lt;/p&gt;</code></p>
+        </ul>
+    </p>
+    <h2>Texto Sobrescrito<code>&lt;sup&gt;</code></h2>
+    <p>
+        <ul>
+            <li><strong>Pra que serve:</strong></li>
+            <p>Exibe o texto um pouco acima da linha, como em fórmulas matemáticas ou referências.</p>
+            <li><strong>Exemplo:</strong></li>
+            <p>A famosa equação de Einstein: E = mc<sup>2</sup></p>
+            <p class="recuo-paragrafo"><code>&lt;p&gt;</code>A famosa equação de Einstein: E = mc<strong><code>&lt;sup&gt;</code></strong>2<strong><code>&lt;/sup&gt;</code></strong><code>&lt;/p&gt;</code></p>
+        </ul>
+    </p>
+    <h2>Texto Subscrito<code>&lt;sub&gt;</code></h2>
+    <p>
+        <ul><Strong>Pra que serve:</Strong></ul>
+        <p>Exibe o texto um pouco abaixo da linha, como em fórmulas químicas.</p>
+        <li><strong>Exemplo:</strong></li>
+        <p>A fórmula da água é H<sub>2</sub>O.</p>
+        <p class="recuo-paragrafo"><code>&lt;p&gt;</code>A fórmula da água é H<strong><code>&lt;sub&gt;</code></strong>2<strong><code>&lt;/sub&gt;</code></strong>O.<code>&lt;/p&gt;</code></p>
+    </p>
+    <h2>Tags que Não São Comuns Usar (<code>&lt;b&gt;</code> e <code>&lt;i&gt;</code>)</h2>
+    <p>As tags <code class="fundo">&lt;b&gt;</code> e <code class="fundo">&lt;i&gt;</code> ainda existem no HTML, mas são desaconselhadas para a maioria dos casos. A principal razão é a semântica.</p>
+    <ul>
+        <li><code class="fundo">&lt;b&gt;</code>(bold): Deixa o texto em negrito, mas não adiciona significado.</li>
+        <li><code class="fundo">&lt;i&gt;</code>(italic): Deixa o texto em itálico, mas não adiciona significado.</li>
+    </ul>
+    <p>A diferença para <code class="fundo">&lt;strong&gt;</code> e <code class="fundo">&lt;em&gt;</code> é sutil, mas fundamental:</p>
+    <ul>
+        <li><code class="fundo">&lt;strong&gt;</code>diz: "Esse texto é importante." (O visual negrito é uma consequência.)</li>
+        <li><code class="fundo">&lt;em&gt;</code>diz: "Deixe esse texto com o visual de negrito."</li>
+    </ul>
+    <p>A melhor prática na web moderna é usar as tags que dão significado ao conteúdo (<strong>, <em>, <mark>) e deixar o CSS para controlar o visual, como o tipo de fonte, cor ou tamanho. Use <b> e <i> apenas em casos muito específicos, quando não há um significado extra a ser transmitido, como em nomes de espécies ou termos técnicos.</p>
 </body>
 </html>
