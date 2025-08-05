@@ -48,3 +48,7 @@ pre {
     overflow-x: auto;
 }
 
+mark {
+    background-color: lightgreen;
+}
+

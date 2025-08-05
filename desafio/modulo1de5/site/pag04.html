@@ -11,5 +11,38 @@
 </head>
 <body>
     <h1>Principais Formatações de Textos</h1>
+    <p>As tags de formatação de texto no HTML servem para dar significado e estilo a trechos de um texto. Cada tag tem um propósito específico, e usá-las corretamente torna seu código mais organizado e acessível.</p>
+    <h2>Negrito / Destaque <code>&lt;strong&gt;</code></h2>
+    <p>
+        <ul>
+            <li><strong>Para que serve:</strong></li>
+            <p>Indica que o conteúdo é de importância forte, urgência ou seriedade. O navegador, por padrão, exibe o texto em negrito. É a tag recomendada para dar destaque por ser semântica.</p>
+            <li><strong>Exemplo:</strong></li>
+            <p>A segurança dos dados é uma questão <strong>crucial</strong> para a empresa.</p>
+            <p class="recuo-paragrafo"><code>&lt;p&gt;</code>A segurança dos dados é uma questão <strong><code>&lt;strong&gt;</code></strong>crucial<strong><code>&lt;/strong&gt;</code></strong> para a empresa.<code>&lt;/p&gt;</code></p>
+        </ul>
+    </p>
+    <h2>Itálico / Ênfase<code>&lt;em&gt;</code></h2>
+    <p>
+        <ul>
+            <li><strong>Pra que serve:</strong></li>
+            <p>Coloca ênfase no texto, destacando-o de forma sutil. Pense nela como a sua voz alterando a entonação de uma palavra. Por padrão, o navegador exibe o texto em itálico.</p>
+            <li><strong>Exemplo:</strong></li>
+            <p>Eu realmente <em>preciso</em> que você salve o projeto agora.</p>
+            <p class="recuo-paragrafo"><code>&lt;p&gt;</code>Eu realmente <code>&lt;em&gt;</code> preciso <strong><code>&lt;/em&gt;</code></strong> que você salve o projeto agora.<code>&lt;/p&gt;</code></p>
+        </ul>
+    </p>
+    <h2>Texto Marcado<code>&lt;mark&gt;</code></h2>
+    <p>
+        <ul>
+            <li><strong>Pra que serve:</strong></li>
+            <p>Destaca um trecho de texto como se você tivesse usado um marca-texto. É ideal para realçar palavras-chave em um contexto específico, como o resultado de uma busca.</p>
+            <li><strong>Exemplo:</strong></li>
+            <p>Sua busca por "HTML" retornou a palavra <mark>HTML</mark> neste parágrafo.</p>
+            <p class="recuo-paragrafo"><code>&lt;p&gt;</code>Sua busca por "HTML" retornou a palavra <code>&lt;mark&gt;</code>HTML<code>&lt;/mark&gt;</code> neste parágrafo.<code>&lt;/p&gt;</code></p>
+        </ul>
+    </p>
+    <p class="recuo-paragrafo">Para mudar a cor da tag <code class="fundo">&lt;mark&gt;</code>, você precisa usar CSS. Por padrão, os navegadores aplicam um fundo amarelo e texto preto ao <code class="fundo">&lt;mark&gt;</code>.Você pode alterar isso facilmente com as propriedades background-color (para a cor de fundo) e color (para a cor do texto).</p>
+    <h2>Texto Grande e Pequeno<code>&lt;small&gt;</code></h2>
 </body>
 </html>
