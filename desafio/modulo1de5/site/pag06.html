@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-    <title>Imagens Dinâmicas</title>
+    <title>Midias</title>
 </head>
 <body>
-    <h1>Imagens Dinâmicas (Imagens Responsivas)</h1>
+    <h1>Midias: Imagens, Audios e Videos</h1>
+
+    <h2>Imagens Dinâmicas</h2>
     <p class="recuo-paragrafo">O termo "imagens dinâmicas" no desenvolvimento web se refere principalmente a imagens que se adaptam ao dispositivo e à tela do usuário. O objetivo é servir a imagem do tamanho e formato mais adequado para cada situação, o que torna o site mais rápido e eficiente, especialmente em celulares.</p>
     <p>Existem duas formas principais de fazer isso em HTML: o atributo <code class="fundo">&lt;srcset&gt;</code> e a tag <code class="fundo">&lt;picture&gt;</code>. Porém vamos aprender apenas o método mais eficaz</p>
         <ul>
@@ -26,25 +28,96 @@
                 <picture>
                     <source media="(min-width: 1051px)" srcset="midia-imagem/gato-grande.jpg">
                     <source media="(min-width: 651px)" srcset="midia-imagem/gato-medio.jpg">
-                    <img src="midia-imagem/gato-pequeno.jpg" alt="Foto gato grande">
+                    <img src="midia-imagem/gato-pequeno.jpg" alt="Foto gato pequeno">
                 </picture>
                 
                 <pre>
                     <code>
-                        <code>&lt;img src="gato-pequeno.jpg" srcset="gato-pequeno.jpg 500w, gato-medio.jpg 800w, gato-grande.jpg 1200w" alt="Foto de um gato"&gt;
+                        <code>&lt;picture&gt;</code>
+                            <code>&lt;source media="(min-width: 1051px)" srcset="midia-imagem/gato-grande.jpg"&gt;</code>
+                            <code>&lt;source media="(min-width: 651px)" srcset="midia-imagem/gato-medio.jpg"&gt;</code>
+                            <code>&lt;img src="midia-imagem/gato-pequeno.jpg" alt="Foto gato pequeno"&gt;</code>
+                        <code>&lt;/picture&gt;</code>
                     </code>
                 </pre>
         </ul>
     <p>Neste caso, o navegador:</p>
         <ul>
-            Procurará a primeira <source> compatível.
-
-            Se a tela for maior que 900px, ele carrega capa-desktop.webp.
-
-            Se a tela for entre 600px e 900px, ele carrega capa-tablet.webp.
-
-            Se a tela for menor que 600px, ele usa a imagem na tag <img> como padrão.
+            <p>Procurará a primeira <code class="fundo">&lt;source&gt;</code> compatível.</p>
+            <li>Se a tela for maior que <strong>651px</strong>, ele carrega <strong>midia-imagem/gato-grande.jpg</strong>.</li>
+            <li>Se a tela for entre <strong>301px</strong> e <strong>1051px</strong>, ele carrega <strong>midia-imagem/gato-medio.jpg</strong>.</li>
+            <li>Se a tela for menor que <strong>651px</strong>, ele usa a imagem na tag <strong><code>&lt;img&gt;</code></strong> como padrão.</li>
         </ul>
-    <p>Em resumo, usar srcset e <picture> é a forma moderna e correta de criar imagens dinâmicas, garantindo que a sua página seja rápida e com a melhor experiência visual em qualquer dispositivo.</p>
+    <p>Em resumo, usar <code class="fundo">&lt;srcet&gt;</code> e <code class="fundo">&lt;picture&gt;</code> é a forma moderna e correta de criar imagens dinâmicas, garantindo que a sua página seja rápida e com a melhor experiência visual em qualquer dispositivo.</p>
+    <p><a href="https://canaltech.com.br/navegadores/como-acessar-a-versao-para-celular-de-um-site-no-chrome/" target="_blank" rel="external">Clique Aqui</a>, para um tutorial de como acessar a versão para celular de um site no Chrome</p>
+
+    <h2>Reproduzindo Audio</h2>
+    <p>Para inserir áudios em uma página HTML de forma moderna e sem a necessidade de plugins (como o Flash), a tag ideal é a <code class="fundo">&lt;audio&gt;</code>. Ela é um contêiner que permite que você exiba um player de áudio completo diretamente na sua página.</p>
+    <h3>Estrutura Básica e Atributos Essenciais</h3>
+    <p>A forma mais simples de usar a tag <code class="fundo">&lt;audio&gt;</code> é com o atributo <code class="fundo">&lt;controls&gt;</code>.</p>
+        <ul>
+            <li><code class="fundo"><strong>src</strong></code>: O caminho para o arquivo de áudio.</li>
+            <li><code class="fundo"><strong>controls</strong></code>: Este atributo é crucial. Ele adiciona os controles de reprodução padrão do navegador (botões de play/pause, volume e tempo), tornando o áudio visível e interativo para o usuário.</li>
+        </ul>
+    <p><strong>Exemplo Básico:</strong></p>    
+    <audio src="midia-audio/good-star.mp3" controls></audio>
+        <pre>
+            <code>
+                <code>&lt;audio src="caminho/para/meu-audio.mp3" controls&gt;&lt;/audio&gt;</code> 
+            </code>
+        </pre>
+    <h3>Melhores Práticas: Compatibilidade com Navegadores</h3>
+    <p>Assim como as imagens dinâmicas, os navegadores não suportam todos os mesmos formatos de áudio. Para garantir que seu áudio funcione para todos os usuários, a melhor prática é usar a tag <code class="fundo">&lt;source&gt;</code> dentro da tag <code class="fundo">&lt;audio&gt;</code>, fornecendo múltiplos formatos do mesmo arquivo.</p>
+    <p>O navegador irá percorrer a lista e usar o primeiro formato que ele for capaz de reproduzir. Os formatos mais comuns são <code class="fundo">.mp3</code>, <code class="fundo">.ogg</code> e <code class="fundo">.wav</code>.</p>
+    <p><strong>Exemplo com Múltiplos Formatos:</strong></p>
+    <audio controls>
+        <source src="midia-audio/good-star.mp3" type="audio/mpeg">
+        <source src="midia-audio/good-star.wav" type="audio/wav">
+        <source src="midia-audio/good-star.ogg" type="audio/ogg">
+        <p>Seu navegador não suporta a tag de áudio.</p>
+    </audio>
+        <pre>
+            <code>
+                <code>&lt;audio controls&gt;</code>
+                    <code>&lt;source src="midia-audio/good-star.mp3" type="audio/mpeg"&gt;</code>
+                    <code>&lt;source src="midia-audio/good-star.wav" type="audio/wav"&gt;</code>
+                    <code>&lt;source src="midia-audio/good-star.ogg" type="audio/ogg"&gt;</code>
+                    <code>&lt;p&gt;</code>Seu navegador não suporta a tag de áudio.<code>&lt;/p&gt;</code>
+                <code>&lt;/audio&gt;</code>
+            </code>
+        </pre>
+    <p>Neste exemplo, o texto dentro da tag <code class="fundo">&lt;p&gt;</code> é uma mensagem de fallback, que só será exibida se o navegador não for compatível com a tag <code class="fundo">&lt;audio&gt;</code>.</p>
+    <h3>Outros Atributos Úteis</h3>
+    <p>A tag <code class="fundo">&lt;audio&gt;</code> possui outros atributos que ajudam a controlar o comportamento da reprodução:</p>
+        <ul>
+            <li><code class="fundo">autoplay</code>: Faz o áudio começar a tocar automaticamente assim que a página é carregada.</li>
+                <ul>
+                    <li><strong>Importante</strong>: Muitos navegadores bloqueiam o autoplay por padrão para não atrapalhar a experiência do usuário. Use com cautela.</li>
+                </ul>
+            <li><code class="fundo">loop</code>: Faz o áudio se repetir em um loop infinito quando ele termina.</li>
+            <li><code class="fundo">muted</code>: Inicia o áudio no modo mudo. Isso é frequentemente usado com o autoplay para contornar o bloqueio de navegadores.</li>
+        </ul>
+    <p>Em resumo, a tag <code class="fundo">&lt;audio&gt;</code> é a forma padrão e semântica de incluir áudios. O uso do atributo <code class="fundo">&lt;controls&gt;</code> e de múltiplas tags <code class="fundo">&lt;source&gt;</code> garante uma experiência de uso consistente para todos.</p>
+    <h3>Atributo <code class="fundo">&lt;preload&gt;</code></h3>
+    <p>O atributo <code class="fundo">&lt;preload&gt;</code> é usado nas tags <code class="fundo">&lt;audio&gt;</code> e <code class="fundo">&lt;video&gt;</code> para controlar como o navegador deve carregar o arquivo de mídia.
+    <p>Ele é uma ferramenta de otimização de performance e tem três valores principais:</p>
+        <ul>
+            <li><code class="fundo">&lt;none&gt;</code>: Não carrega o arquivo até que o usuário clique no play. É o mais recomendado para economizar dados.</li>
+            <li><code class="fundo">&lt;metada&gt;</code>: Carrega apenas informações do arquivo (como a duração), mas não o áudio ou vídeo em si.</li>
+            <li><code class="fundo">&lt;auto&gt;</code>: (Padrão) O navegador baixa o arquivo por completo, mesmo que o usuário não interaja.</li>
+        </ul>
+    <p><strong>Exemplo:</strong></p>
+    <p>Preload none (o mais recomendado para a maioria dos casos).</p>
+    <audio src="midia-audio/good-star.mp3" controls preload="none"></audio>
+        <pre>
+            <code>
+                <code>&lt;audio src="midia-audio/good-star.mp3" controls <strong>preload="none"</strong>&gt;&lt;/audio&gt;</code>
+            </code>
+        </pre>
+    <p>Neste exemplo, o arquivo <code class="fundo">midia-audio/good-star.mp3</code> só será baixado se o usuário clicar no botão de play. Isso é ótimo para evitar que seu site gaste os dados do usuário, especialmente em dispositivos móveis. Em resumo, o atributo <code class="fundo">&lt;preload&gt;</code> é uma ferramenta para otimização de performance, dando a você controle sobre o comportamento de carregamento dos arquivos de áudio.</p>
+
+    <h2>Reproduzindo Video</h2>
+
+    <p style="text-align: center;"><a href="index.html" target="_self" rel="prev">Página Inicial</a></p>
 </body>
 </html>
