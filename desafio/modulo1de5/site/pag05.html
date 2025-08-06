@@ -20,7 +20,7 @@
         <li><strong>O Texto Clicável</strong>: O texto ou imagem que o usuário vê e clica para seguir o link.</li>
     </ol>
     <p><strong>Exemplo Básico:</strong></p>
-    <a href="https://www.google.com">Clique aqui para ir para o Google</a>
+    <a href="https://www.google.com" title="Google">Clique aqui para ir para o Google</a>
     <pre>
         <code>
             <code>&lt;a href="https://www.google.com"&gt;Clique aqui para ir para o Google</code><code>&lt;/a&gt;</code>
@@ -33,7 +33,7 @@
         <ul>
             <li><strong>Links Externos</strong>: Levam o usuário para um site diferente. É uma boa prática usar o atributo <code class="fundo">target="_blank"</code> para que o link seja aberto em uma nova aba, assim o usuário não sai da sua página.</li>
 
-                <a href="https://www.google.com" target="_blank">Acessar o Google em uma nova aba</a>
+                <a href="https://www.google.com" title="Google" target="_blank">Acessar o Google em uma nova aba</a>
                 <pre>
                     <code>
                         <code>&lt;a href="https://www.google.com" <strong>target="_blank"</strong>&gt;Acessar o Google em uma nova aba<code>&lt;/a&gt;</code>
@@ -41,18 +41,18 @@
                 </pre>
             <li><strong>Links Internos</strong>: Levam o usuário para outra página do seu próprio site. Aqui, você usa o caminho relativo do arquivo.</li>
 
-                 <a href="sobre.html">Ir para a página Sobre Nós</a>
+                 <a href="https://about.google/intl/pt_ALL/" title="Sobre Google" target="_blank">Ir para a página Sobre Google</a>
                 <pre>
                     <code>
-                        <code>&lt;a <strong>href="sobre.html"</strong>&gt;Ir para a página Sobre Nós<code>&lt;/a&gt;</code>
+                        <code>&lt;a <strong>href="https://about.google/intl/pt_ALL/"</strong>&gt;Ir para a página Sobre Google<code>&lt;/a&gt;</code>
                     </code>
                 </pre>
             <li><strong>Atributo</strong>: Adicione o atributo <code class="fundo">&lt;title&gt;</code> para fornecer uma dica de ferramenta (um texto que aparece quando você passa o mouse sobre o link), o que melhora a acessibilidade e a experiência do usuário.</li>
 
-                 <a href="contato.html" title="Fale conosco por e-mail ou telefone">Página de Contato</a>
+                 <a href="https://support.google.com/?hl=pt-BR" title="Ajuda Google" target="_blank">Página de Contato</a>
                 <pre>
                     <code>
-                        <code>&lt;;a href="contato.html" <strong>title="Fale conosco por e-mail ou telefone"</strong>&gt;Página de Contato<code>&lt;/a&gt;</code>
+                        <code>&lt;;a href="https://support.google.com/?hl=pt-BR" <strong>title="Ajuda Google" target="_blank"</strong>&gt;Página de Contato<code>&lt;/a&gt;</code>
                     </code>
                 </pre>     
         </ul>
@@ -107,6 +107,7 @@
                 </pre>
         </ol>
     <p>Em resumo, o atributo download é a chave para transformar um link comum em um link para download, oferecendo uma experiência mais clara e direta para o usuário.</p>
-    
+
+    <p style="text-align: center;"><a href="index.html" target="_self" rel="prev">Página Inicial</a></p>
 </body>
 </html>
