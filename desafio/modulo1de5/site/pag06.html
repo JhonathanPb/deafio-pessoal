@@ -10,6 +10,41 @@
     <title>Imagens Dinâmicas</title>
 </head>
 <body>
-    
+    <h1>Imagens Dinâmicas (Imagens Responsivas)</h1>
+    <p class="recuo-paragrafo">O termo "imagens dinâmicas" no desenvolvimento web se refere principalmente a imagens que se adaptam ao dispositivo e à tela do usuário. O objetivo é servir a imagem do tamanho e formato mais adequado para cada situação, o que torna o site mais rápido e eficiente, especialmente em celulares.</p>
+    <p>Existem duas formas principais de fazer isso em HTML: o atributo <code class="fundo">&lt;srcset&gt;</code> e a tag <code class="fundo">&lt;picture&gt;</code>. Porém vamos aprender apenas o método mais eficaz</p>
+        <ul>
+            <li><strong>Usando a Tag <code>&lt;picture&gt;</code> (Método Mais Poderoso)</strong></li>
+            <p>A tag <code class="fundo">&lt;picture&gt;</code> é um contêiner que oferece um controle ainda maior. Com ela, você pode servir imagens completamente diferentes, não apenas em tamanhos diferentes. Isso é útil para</p>
+                <ul>
+                    <code>
+                        <li><strong>Diferentes proporções de imagem</strong>: Mostrar uma imagem cortada de forma diferente em celular e desktop.</li>
+                        <li><strong>Diferentes formatos</strong>: Oferecer um formato de imagem moderno <strong>(como .webp)</strong> para navegadores compatíveis e um formato mais antigo <strong>(.jpg)</strong> como alternativa.</li>
+                    </code>
+                </ul>
+            <p><strong>Exemplo:</strong></p>
+                <picture>
+                    <source media="(min-width: 1051px)" srcset="midia-imagem/gato-grande.jpg">
+                    <source media="(min-width: 651px)" srcset="midia-imagem/gato-medio.jpg">
+                    <img src="midia-imagem/gato-pequeno.jpg" alt="Foto gato grande">
+                </picture>
+                
+                <pre>
+                    <code>
+                        <code>&lt;img src="gato-pequeno.jpg" srcset="gato-pequeno.jpg 500w, gato-medio.jpg 800w, gato-grande.jpg 1200w" alt="Foto de um gato"&gt;
+                    </code>
+                </pre>
+        </ul>
+    <p>Neste caso, o navegador:</p>
+        <ul>
+            Procurará a primeira <source> compatível.
+
+            Se a tela for maior que 900px, ele carrega capa-desktop.webp.
+
+            Se a tela for entre 600px e 900px, ele carrega capa-tablet.webp.
+
+            Se a tela for menor que 600px, ele usa a imagem na tag <img> como padrão.
+        </ul>
+    <p>Em resumo, usar srcset e <picture> é a forma moderna e correta de criar imagens dinâmicas, garantindo que a sua página seja rápida e com a melhor experiência visual em qualquer dispositivo.</p>
 </body>
 </html>
