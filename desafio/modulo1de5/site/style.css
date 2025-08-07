@@ -44,6 +44,11 @@ li {
     height: auto;
 }
 
+.home-page {
+    width: 32px;
+    height: 32px;
+}
+
 pre { 
     overflow-x: auto;
 }
