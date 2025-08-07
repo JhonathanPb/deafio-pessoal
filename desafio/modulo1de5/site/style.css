@@ -33,6 +33,12 @@ li {
     margin-top: 5px;
     margin-bottom: 5px;
 }
+
+video, iframe {
+    max-width: 100%;
+    height: auto;
+}
+
 .fundo { /*Usado para referir-se as Tags*/
     background-color: #07070791;
     font-family: monospace; 
