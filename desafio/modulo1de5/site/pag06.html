@@ -52,7 +52,7 @@
     <p><a href="https://canaltech.com.br/navegadores/como-acessar-a-versao-para-celular-de-um-site-no-chrome/" target="_blank" rel="external">Clique Aqui</a>, para um tutorial de como acessar a versão para celular de um site no Chrome</p>
 
     <h2>Reproduzindo Audio</h2>
-    <p>Para inserir áudios em uma página HTML de forma moderna e sem a necessidade de plugins (como o Flash), a tag ideal é a <code class="fundo">&lt;audio&gt;</code>. Ela é um contêiner que permite que você exiba um player de áudio completo diretamente na sua página.</p>
+    <p class="recuo-paragrafo">Para inserir áudios em uma página HTML de forma moderna e sem a necessidade de plugins (como o Flash), a tag ideal é a <code class="fundo">&lt;audio&gt;</code>. Ela é um contêiner que permite que você exiba um player de áudio completo diretamente na sua página.</p>
     <h3>Estrutura Básica e Atributos Essenciais</h3>
     <p>A forma mais simples de usar a tag <code class="fundo">&lt;audio&gt;</code> é com o atributo <code class="fundo">&lt;controls&gt;</code>.</p>
         <ul>
@@ -117,6 +117,52 @@
     <p>Neste exemplo, o arquivo <code class="fundo">midia-audio/good-star.mp3</code> só será baixado se o usuário clicar no botão de play. Isso é ótimo para evitar que seu site gaste os dados do usuário, especialmente em dispositivos móveis. Em resumo, o atributo <code class="fundo">&lt;preload&gt;</code> é uma ferramenta para otimização de performance, dando a você controle sobre o comportamento de carregamento dos arquivos de áudio.</p>
 
     <h2>Reproduzindo Video</h2>
+    <p class="recuo-paragrafo">A tag <code class="fundo">&lt;video&gt;</code> é a forma padrão e semântica de incorporar vídeos em uma página HTML, sem a necessidade de plugins externos. A sua estrutura é muito parecida com a da tag <code class="fundo">&lt;audio&gt;</code>.</p>
+    <h3>Estrutura Básica e Atributos Essenciais</h3>
+    <p>Assim como a tag de <code class="fundo">&lt;audio&gt;</code>, a tag de vídeo requer o atributo <code class="fundo">&lt;src&gt;</code> e, para ser funcional, o atributo <code class="fundo">&lt;controls&gt;</code>.</p>
+        <ul>
+            <li><code class="fundo">&lt;src&gt;</code>: O caminho para o arquivo de vídeo.</li>
+            <li><code class="fundo">&lt;controls&gt;</code>: Este atributo é fundamental. Ele exibe os controles de reprodução do navegador (play, pause, volume, tela cheia, etc.), tornando o vídeo visível e interativo para o usuário.</li>
+            <li><code class="fundo">&lt;width&gt;</code> e <code class="fundo">&lt;height&gt;</code>: Embora o tamanho do vídeo possa ser controlado com CSS, é uma boa prática usar esses atributos para definir as dimensões do player.</li>
+        </ul>
+    <p><code><strong>Exemplo Básico:</strong></code></p>
+        <video src="midia-video/developing.mp4" width="560" height="320" controls></video>
+        <pre>
+            <code>
+                <code>&lt;video src="midia-video/developing.mp4" width="800" height="450" controls&gt;&lt;/video&gt;</code>
+            </code>
+        </pre>
+    <h3>Melhores Práticas: Otimização e Compatibilidade</h3>
+    <p>Para garantir a melhor experiência para o usuário e compatibilidade com todos os navegadores, use os seguintes atributos e tags:</p>
+        <ul>
+            <li><code class="fundo">&lt;poster&gt;</code>: É um atributo exclusivo para vídeos. Ele define a imagem de capa que será exibida antes que o vídeo comece a tocar. Isso melhora a experiência, pois o usuário vê uma imagem em vez de uma tela preta.</li>
+            <li><code class="fundo">&lt;source&gt;</code>: Forneça múltiplas versões do mesmo vídeo em diferentes formatos (como <strong>.mp4</strong>, <strong>.webm</strong> e <strong>.ogg</strong>). O navegador irá usar o primeiro formato que ele for capaz de reproduzir.</li>
+        </ul>
+    <p><strong>Exemplo com Múltiplos Formatos e Imagem de Capa:</strong></p>
+        <video poster="midia-imagem/poster-pequeno.jpg" width="640" height="360" controls>
+            <source src="midia-video/developing.mp4" type="video/mp4">
+            <source src="midia-video/developing.mkv" type="video/mkv">
+            <source src="midia-video/developing.webm" type="video/webm">
+            <p>Seu navegador não suporta a tag de vídeo.</p>
+        </video>
+            <pre>
+                <code>
+                    <code>&lt;video poster="midia-imagem/poster-pequeno.jpg" width="640" height="360" controls&gt;</code>
+                        <code>&lt;source src="midia-video/developing.mp4" type="video/mp4"&gt;</code>
+                        <code>&lt;source src="midia-video/developing.mkv" type="video/mkv"&gt;</code>
+                        <code>&lt;source src="midia-video/developing.webm" type="video/webm"&gt;</code>
+                        <code>&lt;p&gt; Seu navegador não suporta a tag de vídeo.&lt;/p&gt;</code>
+                    </video>
+                </code>
+            </pre>
+    <h3>Vídeos de Serviços Externos (YouTube, Vimeo)</h3>
+    <p>Se você for inserir um vídeo de plataformas como YouTube ou Vimeo, a melhor e mais fácil prática é usar o código de incorporação (embed) que eles fornecem. Esse código utiliza a tag <code>&lt;iframe&gt;</code>.</p>
+    <p><strong>xemplo (YouTube):</strong></p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/3ZFl21x_uPM?si=q6UixoW7sb_Pl8vP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>Para encontrar o código de incorporação, basta clicar em <strong>"Compartilhar"</strong> e em seguida <strong>"Incorporar"</strong>.</p>
+    <p>Em resumo, a tag <code class="fundo">&lt;video&gt;</code> é a ferramenta ideal para vídeos próprios. Já para vídeos hospedados em serviços de terceiros, a tag <code class="fundo">&lt;iframe&gt;</code> é a solução mais comum e eficiente.</p>
+
+
 
     <p style="text-align: center;"><a href="index.html" target="_self" rel="prev">Página Inicial</a></p>
 </body>
